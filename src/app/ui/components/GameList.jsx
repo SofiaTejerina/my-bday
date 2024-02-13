@@ -14,19 +14,9 @@ export const GameList = () => {
 
   return (
     <div className={`${styles.checkboxList} ${styles.infoInput}`}>
-      {games.forEach((element) => console.log(element))}
-      <GameInput gameId="carcassonne" gameName="Carcassonne" />
-      <GameInput gameId="explodingKittends" gameName="Exploding kittens" />
-      <GameInput gameId="sushiGo" gameName="Sushi go" />
-      <GameInput gameId="unoFlip" gameName="Uno flip" />
-      <GameInput gameId="unoWild" gameName="Uno wild" />
-      <GameInput gameId="catan" gameName="Catan" />
-      <GameInput
-        gameId="cardsAgainTheHumanity"
-        gameName="Cards again the humanity"
-      />
-      <GameInput gameId="islaProhibida" gameName="Isla prohibida" />
-      <GameInput gameId="codigoSecreto" gameName="Código secreto" />
+      {games.map((element, index) => {
+        return <GameInput gameId={element.id} gameName={element.name} />;
+      })}
     </div>
   );
 };
