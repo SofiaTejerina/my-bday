@@ -1,12 +1,21 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import styles from "../../page.module.css";
 import { GameInput } from "./GameInput";
+import { gameList } from "../../_utils/data";
 
 export const GameList = () => {
-  // TODO: con una query al backend cargar la lista de juegos
+  const [games, setGames] = useState([]);
+  useEffect(function () {
+    // TODO: con una query al backend cargar la lista de juegos
+    setGames(gameList);
+  }, []);
 
   return (
     <div className={`${styles.checkboxList} ${styles.infoInput}`}>
-      <GameInput gameId="carcassone" gameName="Carcassone" />
+      {games.forEach((element) => console.log(element))}
+      <GameInput gameId="carcassonne" gameName="Carcassonne" />
       <GameInput gameId="explodingKittends" gameName="Exploding kittens" />
       <GameInput gameId="sushiGo" gameName="Sushi go" />
       <GameInput gameId="unoFlip" gameName="Uno flip" />
