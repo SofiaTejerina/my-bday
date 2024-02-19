@@ -1,0 +1,19 @@
+{
+  "name": "my-bday",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SofiaTejerina/my-bday.git"
+  },
+  "author": "SofiaTejerina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SofiaTejerina/my-bday/issues"
+  },
+  "homepage": "https://github.com/SofiaTejerina/my-bday#readme"
+}

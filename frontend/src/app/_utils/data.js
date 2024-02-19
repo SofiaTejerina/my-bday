@@ -62,5 +62,12 @@ export const gameList = [
         players: "4 - N",
         description: "Se juega en dos equipos. Cada equipo simboliza una red de espías, pero solo los jefes conocen la identidad de sus agentes. Los jugadores, llamados enlaces, deberán ir descubriendo cuál es la palabra clave de cada agente de su equipo y no confundirlos con los agentes del otro equipo."
     },
+    {
+        id: "contraReloj",
+        name: "Contra Reloj",
+        imageUrl: "https://tiendacdn.farmashop.com.uy/media/catalog/product/cache/6eba75f60f78a39a4b9228a06a950068/4/8/4852069-removebg-preview.jpg",
+        players: "4 - N",
+        description: "El desafío consiste en lograr que tu compañeros de equipo identifiquen correctamente la mayor cantidad de incógnitas que tienes en la carta. ¡Puede ser desesperante!"
+    },
 ];
 export const responses = [];
