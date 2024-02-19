@@ -15,7 +15,13 @@ export const GameList = () => {
   return (
     <div className={`${styles.checkboxList} ${styles.infoInput}`}>
       {games.map((element, index) => {
-        return <GameInput gameId={element.id} gameName={element.name} />;
+        return (
+          <GameInput
+            gameId={element.id}
+            gameName={element.name}
+            key={element.id}
+          />
+        );
       })}
     </div>
   );

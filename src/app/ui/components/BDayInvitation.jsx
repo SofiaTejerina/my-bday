@@ -1,6 +1,6 @@
 "use client";
 
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import styles from "../../page.module.css";
 import { GameList } from "./GameList";
 import { FormContext } from "@/app/_utils/contexts";
@@ -15,8 +15,8 @@ export const BDayInvitation = () => {
       <form>
         <label className={styles.informativeLabel}>
           Primero lo primero: itinerario! Esta va a ser una noche de juegos y a
-          continuación vas a tener que elegir 3 de los juegos que más te
-          interesaría jugar:
+          continuación vas a tener que elegir los juegos que más te interesaría
+          jugar:
         </label>
         <GameList />
 
@@ -36,7 +36,7 @@ export const BDayInvitation = () => {
         />
 
         <label htmlFor="threeWordsInput" className={styles.informativeLabel}>
-          Y por último 3 palabras que sientas que te definen:
+          Y 3 palabras que sientas que te definen:
         </label>
         <textarea
           id="threeWordsInput"

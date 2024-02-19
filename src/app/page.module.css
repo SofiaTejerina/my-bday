@@ -41,6 +41,15 @@
   font-size: 1em;
 }
 
+@media (prefers-color-scheme: dark) {
+  .infoButton {
+    background-color: transparent;
+    border-color: transparent;
+    font-size: 1em;
+    color: white;
+  }
+}
+
 .inputCheckbox {
   margin-right: 0.3em;
 }
@@ -56,4 +65,5 @@
   padding: 0.5em;
   border-radius: 4px;
   border: 2px solid #000000;
+  width: 100%;
 }
