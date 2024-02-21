@@ -1,4 +1,4 @@
-export default class GraphController {
+class GraphController {
     setResponse(req, res, next) {
         try {
             const response = req.body;
@@ -10,3 +10,5 @@ export default class GraphController {
         }
     }
 }
+
+export default new GraphController();

@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-// import ResponseRoutes from "./routes/responses";
+import ResponseRoutes from "./routes/responses.js";
 
 const BASE_URI = '/api/v1';
 
@@ -23,10 +23,10 @@ export default class App {
     }
 
     routes() {
-        this.app.get('/', (req, res) => {
-            res.send('<h1>Hello, Express.js Server!</h1>');
-        });
-        // this.app.useRoute('/response', ResponseRoutes);
+        // this.app.get('/', (req, res) => {
+        //     res.send('<h1>Hello, Express.js Server!</h1>');
+        // });
+        this.useRoute('/response', ResponseRoutes);
     }
 
     useRoute(url, routes) {
