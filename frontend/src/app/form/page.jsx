@@ -7,12 +7,28 @@ import { responses } from "../_utils/data";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
+import axios from "axios";
 
 export default function Form() {
   // TODO: que al seleccionar enviar se mande toda la info al backend
 
   const [formValues, setFormValues] = useState(null);
   const router = useRouter();
+
+  const client = axios.create({
+    baseURL: "http://localhost:80/api/v1/",
+  });
+
+  const handleOnSaveResponse = () => {
+    client.post("/response", formValues);
+
+    // Todo: delete
+    responses.push(formValues);
+
+    setFormValues(null);
+    router.replace("/congrats");
+    console.log(responses);
+  };
 
   return (
     <main className={styles.main}>
@@ -56,12 +72,7 @@ export default function Form() {
             <button
               className={styles.sendButton}
               label="Enviar form"
-              onClick={() => {
-                responses.push(formValues);
-                setFormValues(null);
-                router.replace("/congrats");
-                console.log(responses);
-              }}
+              onClick={handleOnSaveResponse}
             >
               Enviar
             </button>
