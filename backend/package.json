@@ -1,19 +1,17 @@
 {
   "name": "my-bday",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon",
+    "start": "node src/index.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/SofiaTejerina/my-bday.git"
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
   },
-  "author": "SofiaTejerina",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/SofiaTejerina/my-bday/issues"
-  },
-  "homepage": "https://github.com/SofiaTejerina/my-bday#readme"
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
