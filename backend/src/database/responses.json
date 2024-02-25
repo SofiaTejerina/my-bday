@@ -1,0 +1,20 @@
+[
+  {
+    "selectedGames": ["explodingKittends", "unoWild"],
+    "name": "e",
+    "id": 1
+  },
+  {
+    "selectedGames": ["unoFlip", "cardsAgainstHumanity"],
+    "name": "wdwd",
+    "threeWords": "wdwd",
+    "id": 2
+  },
+  {
+    "selectedGames": ["catan", "codigoSecreto"],
+    "name": "xeede",
+    "threeWords": "deded",
+    "flavours": "dedede",
+    "id": 3
+  }
+]
