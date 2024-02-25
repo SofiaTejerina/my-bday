@@ -11,9 +11,9 @@ class GraphController {
         }
     }
 
-    getResponses(req, res, next) {
+    async getResponses(req, res, next) {
         try {
-            const responses = graphService.getResponses();
+            const responses = await graphService.getResponses();
             res.status(200).send(responses);
         } catch (err) {
             next(err);
