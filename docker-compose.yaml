@@ -1,0 +1,28 @@
+services:
+  postgres:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: postgres
+    ports:
+      - "5432:5432"
+
+  web-server:
+    build:
+      context: backend/
+      dockerfile: Dockerfile
+    depends_on:
+      - postgres
+    ports:
+      - "80:80"
+
+  web-app:
+    build: frontend/
+    depends_on:
+      - web-server
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=development
+    command: npm run dev
