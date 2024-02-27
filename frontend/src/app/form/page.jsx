@@ -9,15 +9,15 @@ import { useRouter } from "next/navigation";
 import Link from "next/link";
 import axios from "axios";
 
+const client = axios.create({
+  baseURL: "http://localhost:80/api/v1/",
+});
+
 export default function Form() {
   // TODO: que al seleccionar enviar se mande toda la info al backend
 
   const [formValues, setFormValues] = useState(null);
   const router = useRouter();
-
-  const client = axios.create({
-    baseURL: "http://localhost:80/api/v1/",
-  });
 
   const handleOnSaveResponse = () => {
     client.post("/response", formValues);

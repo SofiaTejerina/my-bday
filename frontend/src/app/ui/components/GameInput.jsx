@@ -8,22 +8,20 @@ import { FormContext } from "@/app/_utils/contexts";
 export const GameInput = ({ gameId, gameName }) => {
   const { formValues, setFormValues } = useContext(FormContext);
 
+  function updateValues(value) {
+    setFormValues((prevState) => ({
+      ...prevState,
+      selectedGames: value,
+    }));
+  }
+
   function handleOnClickCheckbox(checkbox) {
     const currentCheckedGames = formValues?.selectedGames || new Array();
     if (checkbox.checked) {
       currentCheckedGames.push(gameId);
-      setFormValues({
-        ...setFormValues,
-        selectedGames: currentCheckedGames,
-      });
+      updateValues(currentCheckedGames);
     } else {
-      const index = currentCheckedGames.indexOf(gameId);
-      if (index > -1) {
-        setFormValues({
-          ...setFormValues,
-          selectedGames: currentCheckedGames.splice(index, 1),
-        });
-      }
+      updateValues(currentCheckedGames.filter((item) => item !== gameId));
     }
   }
 

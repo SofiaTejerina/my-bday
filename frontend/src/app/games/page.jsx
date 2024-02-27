@@ -12,14 +12,14 @@ export default function GamePage() {
 
   const [game, setGame] = useState(null);
 
-  useEffect(function () {
+  useEffect(() => {
     // TODO: con una query al backend obtener: nombre, foto, cantidad de jugadores y descripción del juego
-    setGame(gameList.find((element) => element.id == gameId));
+    setGame(gameList.find((element) => element.id === gameId));
   }, []);
 
   return (
     <main className={styles.main}>
-      {game == null ? (
+      {game === null ? (
         "Loading..."
       ) : (
         <>
