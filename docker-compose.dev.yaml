@@ -9,14 +9,16 @@ services:
       - "5432:5432"
 
   web-server:
-    image: sofiatejerina/my-bday-backend:latest
+    build:
+      context: backend/
+      dockerfile: Dockerfile
     depends_on:
       - postgres
     ports:
       - "80:80"
 
   web-app:
-    image: sofiatejerina/my-bday-frontend:latest
+    build: frontend/
     depends_on:
       - web-server
     ports:
