@@ -16,6 +16,8 @@ services:
       - postgres
     ports:
       - "80:80"
+    environment:
+      - DATABASE_PORT=5432
 
   web-app:
     build: frontend/
@@ -25,4 +27,5 @@ services:
       - "3000:3000"
     environment:
       - NODE_ENV=development
+      - BACKEND_PORT=80
     command: npm run dev

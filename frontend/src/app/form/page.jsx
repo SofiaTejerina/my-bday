@@ -10,7 +10,7 @@ import Link from "next/link";
 import axios from "axios";
 
 const client = axios.create({
-  baseURL: "http://localhost:80/api/v1/",
+  baseURL: `http://localhost:${process.env.BACKEND_PORT}/api/v1/`,
 });
 
 export default function Form() {
