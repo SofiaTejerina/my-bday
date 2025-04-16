@@ -23,9 +23,6 @@ export default class App {
     }
 
     routes() {
-        // this.app.get('/', (req, res) => {
-        //     res.send('<h1>Hello, Express.js Server!</h1>');
-        // });
         this.useRoute('/response', ResponseRoutes);
     }
 

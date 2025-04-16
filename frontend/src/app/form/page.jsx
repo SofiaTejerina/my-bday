@@ -14,15 +14,12 @@ const client = axios.create({
 });
 
 export default function Form() {
-  // TODO: que al seleccionar enviar se mande toda la info al backend
-
   const [formValues, setFormValues] = useState(null);
   const router = useRouter();
 
   const handleOnSaveResponse = () => {
     client.post("/response", formValues);
 
-    // Todo: delete
     responses.push(formValues);
 
     setFormValues(null);
